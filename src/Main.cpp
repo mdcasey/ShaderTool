@@ -20,6 +20,10 @@
 #include "IntrinsicsHLSL.h"
 #include "IntrinsicsMSL.h"
 
+#include "ShaderGLSL.h"
+#include "ShaderHLSL.h"
+#include "ShaderMSL.h"
+
 using namespace ShaderTool;
 
 int main(int argc, char *argv[])
@@ -31,6 +35,10 @@ int main(int argc, char *argv[])
     IntrinsicsTranslatorGLSL intrinsicsGLSL;
     IntrinsicsTranslatorHLSL intrinsicsHLSL;
     IntrinsicsTranslatorMSL  intrinsicsMSL;
+
+    ShaderGLSL shaderGLSL(Stage::Compute);
+    ShaderHLSL shaderHLSL(Stage::Compute);
+    ShaderMSL shaderMSL(Stage::Compute);
 
     return 0;
 }
