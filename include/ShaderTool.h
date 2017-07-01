@@ -12,23 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "ShaderTool.h"
+#pragma once
 
-using namespace ShaderTool;
-
-int main(int argc, char *argv[])
-{
-    TypesTranslatorGLSL typesGLSL;
-    TypesTranslatorHLSL typesHLSL;
-    TypesTranslatorMSL  typesMSL;
-
-    IntrinsicsTranslatorGLSL intrinsicsGLSL;
-    IntrinsicsTranslatorHLSL intrinsicsHLSL;
-    IntrinsicsTranslatorMSL  intrinsicsMSL;
-
-    ShaderGLSL shaderGLSL(Stage::Compute);
-    ShaderHLSL shaderHLSL(Stage::Compute);
-    ShaderMSL shaderMSL(Stage::Compute);
-
-    return 0;
-}
+#include "ShaderTool/Intrinsics.h"
+#include "ShaderTool/IntrinsicsGLSL.h"
+#include "ShaderTool/IntrinsicsHLSL.h"
+#include "ShaderTool/IntrinsicsMSL.h"
+#include "ShaderTool/Shader.h"
+#include "ShaderTool/ShaderGLSL.h"
+#include "ShaderTool/ShaderHLSL.h"
+#include "ShaderTool/ShaderMSL.h"
+#include "ShaderTool/Types.h"
+#include "ShaderTool/TypesGLSL.h"
+#include "ShaderTool/TypesHLSL.h"
+#include "ShaderTool/TypesMSL.h"
