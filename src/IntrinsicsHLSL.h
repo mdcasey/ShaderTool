@@ -12,25 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "TypesGLSL.h"
-#include "TypesHLSL.h"
-#include "TypesMSL.h"
+#pragma once
 
-#include "IntrinsicsGLSL.h"
-#include "IntrinsicsHLSL.h"
-#include "IntrinsicsMSL.h"
+#include "Intrinsics.h"
 
-using namespace ShaderTool;
-
-int main(int argc, char *argv[])
+namespace ShaderTool
 {
-    TypesTranslatorGLSL typesGLSL;
-    TypesTranslatorHLSL typesHLSL;
-    TypesTranslatorMSL  typesMSL;
-
-    IntrinsicsTranslatorGLSL intrinsicsGLSL;
-    IntrinsicsTranslatorHLSL intrinsicsHLSL;
-    IntrinsicsTranslatorMSL  intrinsicsMSL;
-
-    return 0;
+    // Utilities for language-specific and language-independent intrinsic conversions
+    class IntrinsicsTranslatorHLSL : public IntrinsicsTranslator
+    {
+    public:
+        // Default constructor
+        IntrinsicsTranslatorHLSL() noexcept;
+    };
 }
